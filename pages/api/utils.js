@@ -12,8 +12,8 @@ export default async function handler(req, res) {
     await prisma.user.deleteMany({
       where: {
         NOT: {
-          id: {
-            in: [session.user.id],
+          email: {
+            in: [session.user.email],
           },
         },
       },
