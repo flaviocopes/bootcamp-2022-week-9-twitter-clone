@@ -2,7 +2,7 @@ import Image from 'next/image'
 import timeago from 'lib/timeago'
 import Link from 'next/link'
 
-const Tweet = ({ tweet, nolink }) => {
+export default function Tweet({ tweet, nolink }) {
   return (
     <div className='mb-4'>
       <div className='flex flex-shrink-0 p-4 pb-0'>
@@ -53,5 +53,3 @@ const Tweet = ({ tweet, nolink }) => {
     </div>
   )
 }
-
-export default Tweet
