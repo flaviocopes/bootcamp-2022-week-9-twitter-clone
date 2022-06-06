@@ -28,7 +28,7 @@ export default function Home({ initialTweets }) {
 
   return (
     <>
-      <NewTweet />
+      <NewTweet tweets={tweets} setTweets={setTweets} />
       <Tweets tweets={tweets} />
       <LoadMore tweets={tweets} setTweets={setTweets} />
     </>

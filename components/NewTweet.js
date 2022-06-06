@@ -2,7 +2,7 @@ import { useState } from 'react'
 import { useSession } from 'next-auth/react'
 import { useRouter } from 'next/router'
 
-export default function NewTweet() {
+export default function NewTweet({ tweets, setTweets }) {
   const [content, setContent] = useState('')
   const { data: session } = useSession()
   const router = useRouter()
@@ -29,7 +29,11 @@ export default function NewTweet() {
           }),
         })
 
-        router.reload(window.location.pathname)
+        const tweet = await res.json()
+
+        setTweets([tweet, ...tweets])
+
+        //router.reload(window.location.pathname)
       }}
     >
       <div className='flex'>
