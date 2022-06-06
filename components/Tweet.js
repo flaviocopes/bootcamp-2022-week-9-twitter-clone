@@ -6,12 +6,12 @@ export default function Tweet({ tweet, nolink }) {
   return (
     <div className='mb-4'>
       <div className='flex flex-shrink-0 p-4 pb-0'>
-        <div className='flex-shrink-0 block group'>
+        <div className='flex-shrink-0 block'>
           <div className='flex items-center'>
             <div>
               {tweet.author.image && (
                 <Image
-                  className='w-64 h-64 rounded-full'
+                  className='rounded-full'
                   src={tweet.author.image}
                   alt=''
                   width='40'

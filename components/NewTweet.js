@@ -19,7 +19,7 @@ export default function NewTweet({ tweets, setTweets }) {
           return
         }
 
-        await fetch('/api/tweet', {
+        const res = await fetch('/api/tweet', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',

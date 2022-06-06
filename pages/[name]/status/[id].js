@@ -24,7 +24,7 @@ export default function SingleTweet({ tweet, replies }) {
         <div className='flex-1 py-2 m-2 text-center'>
           <a
             href='#'
-            className='flex items-center w-12 px-3 py-2 mt-1 text-base font-medium leading-6 text-gray-500 rounded-full group hover:bg-color-accent-hover hover:color-accent-hover'
+            className='flex items-center w-12 px-3 py-2 mt-1 text-base font-medium leading-6 text-gray-500 rounded-full hover:bg-color-accent-hover hover:color-accent-hover'
             onClick={async () => {
               const res = await fetch('/api/tweet', {
                 body: JSON.stringify({
