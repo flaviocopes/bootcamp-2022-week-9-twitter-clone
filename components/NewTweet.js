@@ -33,6 +33,8 @@ export default function NewTweet({ tweets, setTweets }) {
 
         setTweets([tweet, ...tweets])
 
+        setContent('')
+
         //router.reload(window.location.pathname)
       }}
     >
@@ -44,6 +46,7 @@ export default function NewTweet({ tweets, setTweets }) {
             cols={50}
             placeholder="What's happening?"
             name='content'
+            value={content}
             onChange={(e) => setContent(e.target.value)}
           />
         </div>
