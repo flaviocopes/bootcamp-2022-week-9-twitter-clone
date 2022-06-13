@@ -12,7 +12,7 @@ export default function SingleTweet({ tweet, replies }) {
   const router = useRouter()
 
   if (typeof window !== 'undefined' && tweet.parent) {
-    router.push(`/${tweet.author.name}/status/${tweet.parent}`)
+    router.push(`/${tweet.parent_data.author.name}/status/${tweet.parent}`)
   }
 
   return (
